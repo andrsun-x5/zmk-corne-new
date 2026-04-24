@@ -88,10 +88,28 @@
 
         eng {
             bindings = <
-&none  &trans  &trans  &trans  &kp P   &kp Y   &kp F     &kp G   &kp C   &kp R   &trans  &trans  &trans  &none
-       &trans  &kp A   &kp O   &kp E   &kp U   &kp I     &kp D   &kp H   &kp T   &kp N   &kp S   &trans
-       &trans  &kp Q   &kp J   &kp K   &kp X   &kp B     &kp M   &kp W   &kp V   &kp Z   &kp L   &none
-                               &trans  &trans  &trans    &trans  &trans  &trans
+&none  &hml ESCAPE CAPSLOCK  &hml EXCLAMATION QUESTION  &kp P  &kp Y             &kp F         &hml SEMICOLON COMMA    &hmr COLON PERIOD  &kp G       &kp C             &kp R  &trans  &trans           &none
+       &trans                &kp A                      &kp O  &kp E             &kp U         &kp I                   &kp D              &kp H       &kp T             &kp N  &kp S   &trans
+       &kp LEFT_SHIFT        &kp Q                      &kp J  &kp K             &kp X         &kp B                   &kp M              &kp W       &kp V             &kp Z  &kp L   &kp RIGHT_SHIFT
+                                                               &kp LEFT_CONTROL  &tkl 2 ENTER  &kp BACKSPACE           &kp SPACE          &tkr 2 TAB  &kp LEFT_COMMAND
+            >;
+        };
+
+        rus {
+            bindings = <
+&none  &hml ESCAPE CAPSLOCK  &hml EXCLAMATION AMPERSAND  &hml RIGHT_BRACKET M  &kp L             &kp T         &hml DOLLAR RS(SLASH)    &hmr CARET KP_DOT  &kp P       &kp D             &kp Z          &kp X  &hmr O I         &none
+       &trans                &kp E                       &kp B                 &hml GRAVE T      &kp J         &kp F                    &kp K              &kp Y       &kp N             &kp C          &kp H  &kp W
+       &kp LEFT_SHIFT        &kp A                       &kp APOSTROPHE        &kp LEFT_BRACKET  &hml S Q      &kp PERIOD               &kp COMMA          &kp V       &kp G             &kp SEMICOLON  &kp U  &kp RIGHT_SHIFT
+                                                                               &kp LEFT_CONTROL  &tkl 2 ENTER  &kp BACKSPACE            &kp SPACE          &tkr 2 TAB  &kp LEFT_COMMAND
+            >;
+        };
+
+        num {
+            bindings = <
+&none  &mt TILDE GRAVE  &kp ASTERISK  &kp N7  &kp N8  &kp N9  &kp KP_PLUS             &kp LEFT_PARENTHESIS         &kp RIGHT_PARENTHESIS          &mt SEMICOLON COLON  &mt QUESTION EXCLAMATION  &kp CARET  &trans  &none
+       &mt PIPE BSLH    &kp SLASH     &kp N4  &kp N5  &kp N6  &mt UNDERSCORE MINUS    &mt LEFT_BRACE LEFT_BRACKET  &mt RIGHT_BRACE RIGHT_BRACKET  &kp HASH             &kp DOLLAR                &trans     &trans
+       &kp EQUAL        &kp NUMBER_0  &kp N1  &kp N2  &kp N3  &mt COMMA KP_DOT        &kp LESS_THAN                &kp GREATER_THAN               &kp PERCENT          &kp AT_SIGN               &trans     &trans
+                                              &trans  &trans  &trans                  &trans                       &trans                         &trans
             >;
         };
 
@@ -117,15 +135,6 @@
        &mt CAPSLOCK TAB  &hml LEFT_GUI A  &hml LEFT_ALT S  &hml LEFT_CONTROL D  &hml LEFT_SHIFT F  &kp G        &kp H      &hmr RIGHT_SHIFT J  &hmr RIGHT_CONTROL K  &hmr RIGHT_ALT L  &hmr RIGHT_GUI SEMICOLON  &kp SINGLE_QUOTE
        &kp LEFT_SHIFT    &kp Z            &kp X            &kp C                &kp V              &kp B        &kp N      &kp M               &kp COMMA             &kp DOT           &kp FSLH                  &kp RIGHT_SHIFT
                                                            &kp LEFT_COMMAND     &mo 0              &kp SPACE    &kp ENTER  &mo 0               &kp LEFT_ALT
-            >;
-        };
-
-        num {
-            bindings = <
-&none  &mt TILDE GRAVE  &kp ASTERISK  &kp N7  &kp N8  &kp N9  &kp KP_PLUS             &kp LEFT_PARENTHESIS         &kp RIGHT_PARENTHESIS          &mt SEMICOLON COLON  &mt QUESTION EXCLAMATION  &kp CARET  &trans  &none
-       &mt PIPE BSLH    &kp SLASH     &kp N4  &kp N5  &kp N6  &mt UNDERSCORE MINUS    &mt LEFT_BRACE LEFT_BRACKET  &mt RIGHT_BRACE RIGHT_BRACKET  &kp HASH             &kp DOLLAR                &trans     &trans
-       &kp EQUAL        &kp NUMBER_0  &kp N1  &kp N2  &kp N3  &mt COMMA KP_DOT        &kp LESS_THAN                &kp GREATER_THAN               &kp PERCENT          &kp AT_SIGN               &trans     &trans
-                                              &trans  &trans  &trans                  &trans                       &trans                         &trans
             >;
         };
     };
