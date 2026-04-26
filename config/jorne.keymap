@@ -106,10 +106,10 @@
 
         num {
             bindings = <
-&none  &mt TILDE GRAVE  &kp ASTERISK  &kp N7  &kp N8  &kp N9  &kp KP_PLUS             &kp LEFT_PARENTHESIS         &kp RIGHT_PARENTHESIS          &mt SEMICOLON COLON  &mt QUESTION EXCLAMATION  &kp CARET  &trans  &none
-       &mt PIPE BSLH    &kp SLASH     &kp N4  &kp N5  &kp N6  &mt UNDERSCORE MINUS    &mt LEFT_BRACE LEFT_BRACKET  &mt RIGHT_BRACE RIGHT_BRACKET  &kp HASH             &kp DOLLAR                &trans     &trans
-       &kp EQUAL        &kp NUMBER_0  &kp N1  &kp N2  &kp N3  &mt COMMA KP_DOT        &kp LESS_THAN                &kp GREATER_THAN               &kp PERCENT          &kp AT_SIGN               &trans     &trans
-                                              &trans  &trans  &trans                  &trans                       &trans                         &trans
+&none  &trans    &kp CARET    &kp SLASH      &kp UNDERSCORE         &mt LEFT_BRACKET RIGHT_BRACKET          &kp KP_COMMA                  &kp KP_DOT               &mt F7 KP_NUMBER_7  &mt F8 KP_NUMBER_8  &mt F9 KP_NUMBER_9  &trans               &trans  &none
+       &kp HASH  &kp PERCENT  &kp PIPE       &mt DQT DOUBLE_QUOTES  &mt LEFT_PARENTHESIS RIGHT_PARENTHESIS  &mt EXCLAMATION KP_EQUAL      &mt KP_MULTIPLY KP_PLUS  &mt F4 KP_NUMBER_4  &mt F5 KP_NUMBER_5  &mt F6 KP_NUMBER_6  &mt F10 KP_NUMBER_0  &trans
+       &trans    &trans       &kp BACKSLASH  &kp MINUS              &mt LEFT_BRACE RIGHT_BRACE              &mt GREATER_THAN LESS_THAN    &mt KP_DIVIDE KP_MINUS   &mt F1 KP_NUMBER_1  &mt F2 KP_NUMBER_2  &mt F3 KP_NUMBER_3  &trans               &trans
+                                             &trans                 &trans                                  &none                         &none                    &trans              &trans
             >;
         };
 
