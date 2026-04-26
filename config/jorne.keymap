@@ -88,18 +88,18 @@
 
         eng {
             bindings = <
-&none  &hml ESCAPE CAPSLOCK  &hml EXCLAMATION QUESTION  &kp P  &kp Y                &kp F             &hml SEMICOLON COMMA    &hmr COLON PERIOD  &kp G             &kp C       &kp R  &trans  &trans           &none
-       &to 1                 &kp A                      &kp O  &kp E                &kp U             &kp I                   &kp D              &kp H             &kp T       &kp N  &kp S   &trans
-       &kp LEFT_SHIFT        &kp Q                      &kp J  &kp K                &kp X             &kp B                   &kp M              &kp W             &kp V       &kp Z  &kp L   &kp RIGHT_SHIFT
+&none  &hml ESCAPE CAPSLOCK  &hml EXCLAMATION QUESTION  &kp P  &mt LC(Y) Y          &mt LC(F) F       &hml SEMICOLON COMMA    &hmr COLON PERIOD  &mt LC(G) G       &mt LC(C) C  &kp R        &kp GRAVE    &kp AMPERSAND       &none
+       &to 1                 &mt LC(A) A                &kp O  &kp E                &mt LC(U) U       &mt LC(I) I             &kp D              &kp H             &kp T        &mt LC(N) N  &mt LC(S) S  &mt AT_SIGN DOLLAR
+       &kp LEFT_SHIFT        &kp Q                      &kp J  &kp K                &mt LC(X) X       &mt RC(B) B             &kp M              &kp W             &mt LC(V) V  &mt LC(Z) Z  &kp L        &kp RIGHT_SHIFT
                                                                &hml LEFT_ALT ENTER  &kp LEFT_COMMAND  &tkl 2 BACKSPACE        &tkr 2 SPACE       &kp LEFT_CONTROL  &tkr 3 TAB
             >;
         };
 
         rus {
             bindings = <
-&none  &hml ESCAPE CAPSLOCK  &hml EXCLAMATION AMPERSAND  &hml RIGHT_BRACKET M  &kp L                &kp T             &hml DOLLAR RS(SLASH)    &hmr CARET KP_DOT  &kp P             &kp D       &kp Z          &kp X  &hmr O I         &none
-       &to 0                 &kp E                       &kp B                 &hml GRAVE T         &kp J             &kp F                    &kp K              &kp Y             &kp N       &kp C          &kp H  &kp W
-       &kp LEFT_SHIFT        &kp A                       &kp APOSTROPHE        &kp LEFT_BRACKET     &hml S Q          &kp PERIOD               &kp COMMA          &kp V             &kp G       &kp SEMICOLON  &kp U  &kp RIGHT_SHIFT
+&none  &hml ESCAPE CAPSLOCK  &hml EXCLAMATION AMPERSAND  &hml RIGHT_BRACKET M  &mt LC(Y) L          &mt LC(F) T       &hml DOLLAR RS(SLASH)    &hmr CARET KP_DOT  &mt LC(G) P       &mt LC(C) D  &kp Z                        &kp X        &hmr O I         &none
+       &to 0                 &mt LC(A) E                 &hml Q B              &hml GRAVE T         &mt LC(U) J       &mt LC(I) F              &kp K              &kp Y             &kp N        &mt LC(N) C                  &mt LC(S) H  &kp W
+       &kp LEFT_SHIFT        &kp A                       &kp APOSTROPHE        &kp LEFT_BRACKET     &mt LC(X) S       &mt LC(B) PERIOD         &kp COMMA          &kp V             &mt LC(V) G  &mt LC(SEMICOLON) SEMICOLON  &kp U        &kp RIGHT_SHIFT
                                                                                &hml LEFT_ALT ENTER  &kp LEFT_COMMAND  &tkl 2 BACKSPACE         &tkr 2 SPACE       &kp LEFT_CONTROL  &tkr 3 TAB
             >;
         };
