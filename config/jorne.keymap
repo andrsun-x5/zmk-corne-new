@@ -5,9 +5,11 @@
  */
 
 #include <behaviors.dtsi>
+#include <dt-bindings/zmk/backlight.h>
 #include <dt-bindings/zmk/bt.h>
 #include <dt-bindings/zmk/keys.h>
 #include <dt-bindings/zmk/outputs.h>
+#include <dt-bindings/zmk/pointing.h>
 
 / {
     combos {
@@ -88,37 +90,37 @@
 
         eng {
             bindings = <
-&none  &hml ESCAPE CAPSLOCK  &hml EXCLAMATION QUESTION  &kp P  &mt LC(Y) Y          &mt LC(F) F       &hml SEMICOLON COMMA    &hmr COLON PERIOD  &mt LC(G) G       &mt LC(C) C  &kp R        &kp GRAVE    &kp AMPERSAND       &none
-       &to 1                 &mt LC(A) A                &kp O  &kp E                &mt LC(U) U       &mt LC(I) I             &kp D              &kp H             &kp T        &mt LC(N) N  &mt LC(S) S  &mt AT_SIGN DOLLAR
-       &kp LEFT_SHIFT        &kp Q                      &kp J  &kp K                &mt LC(X) X       &mt RC(B) B             &kp M              &kp W             &mt LC(V) V  &mt LC(Z) Z  &kp L        &kp RIGHT_SHIFT
+&none  &hml ESCAPE CAPSLOCK  &hml EXCLAMATION QUESTION  &kp P  &mt LC(Y) Y          &mt LC(F) F       &hml SEMICOLON COMMA    &hmr COLON PERIOD  &mt LC(G) G       &mt LC(C) C  &kp R        &mt PRINTSCREEN GRAVE  &kp AMPERSAND        &none
+       &to 1                 &mt LC(A) A                &kp O  &kp E                &mt LC(U) U       &mt LC(I) I             &kp D              &kp H             &kp T        &mt LC(N) N  &mt LC(S) S            &mt AT_SIGN DOLLAR
+       &mt LEFT_SHIFT HOME   &kp Q                      &kp J  &kp K                &mt LC(X) X       &mt RC(B) B             &kp M              &kp W             &mt LC(V) V  &mt LC(Z) Z  &kp L                  &mt RIGHT_SHIFT END
                                                                &hml LEFT_ALT ENTER  &kp LEFT_COMMAND  &tkl 2 BACKSPACE        &tkr 2 SPACE       &kp LEFT_CONTROL  &tkr 3 TAB
             >;
         };
 
         rus {
             bindings = <
-&none  &hml ESCAPE CAPSLOCK  &hml EXCLAMATION AMPERSAND  &hml RIGHT_BRACKET M  &mt LC(Y) L          &mt LC(F) T       &hml DOLLAR RS(SLASH)    &hmr CARET KP_DOT  &mt LC(G) P       &mt LC(C) D  &kp Z                        &kp X        &hmr O I         &none
-       &to 0                 &mt LC(A) E                 &hml Q B              &hml GRAVE T         &mt LC(U) J       &mt LC(I) F              &kp K              &kp Y             &kp N        &mt LC(N) C                  &mt LC(S) H  &kp W
-       &kp LEFT_SHIFT        &kp A                       &kp APOSTROPHE        &kp LEFT_BRACKET     &mt LC(X) S       &mt LC(B) PERIOD         &kp COMMA          &kp V             &mt LC(V) G  &mt LC(SEMICOLON) SEMICOLON  &kp U        &kp RIGHT_SHIFT
+&none  &hml ESCAPE CAPSLOCK  &hml EXCLAMATION AMPERSAND  &hml RIGHT_BRACKET M  &mt LC(Y) L          &mt LC(F) T       &hml DOLLAR RS(SLASH)    &hmr CARET KP_DOT  &mt LC(G) P       &mt LC(C) D  &kp Z                        &mt PRINTSCREEN X  &hmr O I         &none
+       &to 0                 &mt LC(A) E                 &hml Q B              &hml GRAVE T         &mt LC(U) J       &mt LC(I) F              &kp K              &kp Y             &kp N        &mt LC(N) C                  &mt LC(S) H        &kp W
+       &kp LEFT_SHIFT        &kp A                       &kp APOSTROPHE        &kp LEFT_BRACKET     &mt LC(X) S       &mt LC(B) PERIOD         &kp COMMA          &kp V             &mt LC(V) G  &mt LC(SEMICOLON) SEMICOLON  &kp U              &kp RIGHT_SHIFT
                                                                                &hml LEFT_ALT ENTER  &kp LEFT_COMMAND  &tkl 2 BACKSPACE         &tkr 2 SPACE       &kp LEFT_CONTROL  &tkr 3 TAB
             >;
         };
 
         num {
             bindings = <
-&none  &trans    &kp CARET    &kp SLASH      &kp UNDERSCORE         &mt LEFT_BRACKET RIGHT_BRACKET          &kp KP_COMMA                  &kp KP_DOT               &mt F7 KP_NUMBER_7  &mt F8 KP_NUMBER_8  &mt F9 KP_NUMBER_9  &trans               &trans  &none
-       &kp HASH  &kp PERCENT  &kp PIPE       &mt DQT DOUBLE_QUOTES  &mt LEFT_PARENTHESIS RIGHT_PARENTHESIS  &mt EXCLAMATION KP_EQUAL      &mt KP_MULTIPLY KP_PLUS  &mt F4 KP_NUMBER_4  &mt F5 KP_NUMBER_5  &mt F6 KP_NUMBER_6  &mt F10 KP_NUMBER_0  &trans
-       &trans    &trans       &kp BACKSLASH  &kp MINUS              &mt LEFT_BRACE RIGHT_BRACE              &mt GREATER_THAN LESS_THAN    &mt KP_DIVIDE KP_MINUS   &mt F1 KP_NUMBER_1  &mt F2 KP_NUMBER_2  &mt F3 KP_NUMBER_3  &trans               &trans
-                                             &trans                 &trans                                  &none                         &none                    &trans              &trans
+&none  &none           &none           &kp CARET      &kp UNDERSCORE         &mt LEFT_BRACKET RIGHT_BRACKET          &kp KP_COMMA                  &kp KP_DOT               &mt F7 KP_NUMBER_7  &mt F8 KP_NUMBER_8  &mt F9 KP_NUMBER_9  &none                &none           &none
+       &kp KP_NUMLOCK  &mt POUND HASH  &kp PERCENT    &mt DQT DOUBLE_QUOTES  &mt LEFT_PARENTHESIS RIGHT_PARENTHESIS  &mt EXCLAMATION KP_EQUAL      &mt KP_MULTIPLY KP_PLUS  &mt F4 KP_NUMBER_4  &mt F5 KP_NUMBER_5  &mt F6 KP_NUMBER_6  &mt F10 KP_NUMBER_0  &kp SCROLLLOCK
+       &none           &none           &kp BACKSLASH  &kp PIPE               &mt LEFT_BRACE RIGHT_BRACE              &mt GREATER_THAN LESS_THAN    &mt KP_DIVIDE KP_MINUS   &mt F1 KP_NUMBER_1  &mt F2 KP_NUMBER_2  &mt F3 KP_NUMBER_3  &none                &none
+                                                      &trans                 &trans                                  &trans                        &trans                   &trans              &trans
             >;
         };
 
         sup {
             bindings = <
-&none  &bt BT_CLR      &mt EXCLAMATION NUMBER_1  &mt AT_SIGN NUMBER_2  &mt POUND NUMBER_3  &mt DOLLAR NUMBER_4  &mt PERCENT NUMBER_5    &mt CARET NUMBER_6  &mt AMPERSAND NUMBER_7  &mt ASTERISK NUMBER_8  &mt LEFT_PARENTHESIS NUMBER_9  &mt RIGHT_PARENTHESIS NUMBER_0  &mt UNDERSCORE MINUS  &none
-       &bt BT_CLR_ALL  &trans                    &trans                &kp LG(C)           &kp LG(V)            &kp LG(X)               &trans              &kp LEFT_ARROW          &kp UP_ARROW           &kp RIGHT_ARROW                &kp C_VOLUME_UP                 &mt PLUS EQUAL
-       &kp GLOBE       &bt BT_SEL 0              &bt BT_SEL 1          &bt BT_SEL 2        &bt BT_SEL 3         &bt BT_SEL 4            &trans              &trans                  &kp DOWN_ARROW         &trans                         &kp C_VOL_DN                    &kp K_MUTE
-                                                                       &out OUT_TOG        &trans               &trans                  &trans              &trans                  &trans
+&none  &none  &msc SCRL_LEFT   &mkp LCLK       &mmv MOVE_UP    &mkp RCLK        &msc SCRL_UP      &kp C_VOLUME_UP    &bl BL_INC                 &mt C_PLAY UP_ARROW     &bl BL_DEC              &bt BT_CLR    &bt BT_CLR_ALL  &none
+       &none  &msc SCRL_RIGHT  &mmv MOVE_LEFT  &mmv MOVE_DOWN  &mmv MOVE_RIGHT  &msc SCRL_DOWN    &kp K_MUTE         &mt C_PREVIOUS LEFT_ARROW  &mt C_PAUSE DOWN_ARROW  &mt C_NEXT RIGHT_ARROW  &bl BL_TOG    &out OUT_TOG
+       &none  &none            &none           &none           &none            &none             &kp C_VOLUME_DOWN  &bt BT_SEL 0               &bt BT_SEL 1            &bt BT_SEL 2            &bt BT_SEL 3  &bt BT_SEL 4
+                                               &trans          &trans           &trans            &trans             &trans                     &trans
             >;
         };
     };
