@@ -89,7 +89,7 @@
         eng {
             bindings = <
 &none  &hml ESCAPE CAPSLOCK  &hml EXCLAMATION QUESTION  &kp P  &mt LC(Y) Y          &mt LC(F) F       &hml SEMICOLON COMMA    &hmr COLON PERIOD  &mt LC(G) G    &mt LC(C) C  &kp R        &mt PRINTSCREEN GRAVE  &kp AMPERSAND        &none
-       &to 1                 &mt LC(A) A                &kp O  &kp E                &mt LC(U) U       &mt LC(I) I             &kp D              &kp H          &kp T        &mt LC(N) N  &mt LC(S) S            &mt AT_SIGN DOLLAR
+       &to 1                 &mt LC(A) A                &kp O  &kp E                &mt LC(U) U       &mt LC(I) I             &mt DELETE D       &kp H          &kp T        &mt LC(N) N  &mt LC(S) S            &mt AT_SIGN DOLLAR
        &mt LEFT_SHIFT HOME   &kp Q                      &kp J  &kp K                &mt LC(X) X       &mt RC(B) B             &kp M              &kp W          &mt LC(V) V  &mt LC(Z) Z  &kp L                  &mt RIGHT_SHIFT END
                                                                &hml LEFT_ALT ENTER  &kp LEFT_CONTROL  &tkl 2 BACKSPACE        &tkr 2 SPACE       &kp LEFT_META  &tkr 3 TAB
             >;
@@ -98,7 +98,7 @@
         rus {
             bindings = <
 &none  &hml ESCAPE CAPSLOCK  &hml EXCLAMATION AMPERSAND  &hml RIGHT_BRACKET M  &mt LC(Y) L          &mt LC(F) R       &hml DOLLAR RS(SLASH)    &hmr CARET SLASH  &mt LC(G) P    &mt LC(C) D  &kp Z                        &mt PRINTSCREEN X  &hmr O I             &none
-       &to 0                 &mt LC(A) E                 &hml Q B              &hml GRAVE T         &mt LC(U) J       &mt LC(I) F              &kp K             &kp Y          &kp N        &mt LC(N) C                  &mt LC(S) H        &kp W
+       &to 0                 &mt LC(A) E                 &hml Q B              &hml GRAVE T         &mt LC(U) J       &mt LC(I) F              &mt DELETE K      &kp Y          &kp N        &mt LC(N) C                  &mt LC(S) H        &kp W
        &mt LEFT_SHIFT HOME   &kp A                       &kp APOSTROPHE        &kp LEFT_BRACKET     &mt LC(X) S       &mt LC(B) PERIOD         &kp COMMA         &kp V          &mt LC(V) G  &mt LC(SEMICOLON) SEMICOLON  &kp U              &mt RIGHT_SHIFT END
                                                                                &hml LEFT_ALT ENTER  &kp LEFT_CONTROL  &tkl 2 BACKSPACE         &tkr 2 SPACE      &kp LEFT_META  &tkr 3 TAB
             >;
@@ -106,10 +106,10 @@
 
         num {
             bindings = <
-&none  &none           &none           &kp CARET      &kp UNDERSCORE  &mt LEFT_BRACKET RIGHT_BRACKET          &kp KP_COMMA                  &kp KP_DOT               &mt F7 KP_NUMBER_7  &mt F8 KP_NUMBER_8  &mt F9 KP_NUMBER_9  &none                &none           &none
-       &kp KP_NUMLOCK  &mt POUND HASH  &kp PERCENT    &mt DQT SQT     &mt LEFT_PARENTHESIS RIGHT_PARENTHESIS  &mt EXCLAMATION KP_EQUAL      &mt KP_MULTIPLY KP_PLUS  &mt F4 KP_NUMBER_4  &mt F5 KP_NUMBER_5  &mt F6 KP_NUMBER_6  &mt F10 KP_NUMBER_0  &kp SCROLLLOCK
-       &none           &none           &kp BACKSLASH  &kp PIPE        &mt LEFT_BRACE RIGHT_BRACE              &mt GREATER_THAN LESS_THAN    &mt KP_DIVIDE KP_MINUS   &mt F1 KP_NUMBER_1  &mt F2 KP_NUMBER_2  &mt F3 KP_NUMBER_3  &none                &none
-                                                      &trans          &trans                                  &trans                        &trans                   &trans              &trans
+&none  &mt LC(INSERT) INSERT  &none           &kp CARET      &kp UNDERSCORE  &mt LEFT_BRACKET RIGHT_BRACKET          &kp KP_COMMA                  &kp KP_DOT               &mt F7 KP_NUMBER_7  &mt F8 KP_NUMBER_8  &mt F9 KP_NUMBER_9  &none                &mt LS(INSERT) INSERT  &none
+       &kp KP_NUMLOCK         &mt POUND HASH  &kp PERCENT    &mt DQT SQT     &mt LEFT_PARENTHESIS RIGHT_PARENTHESIS  &mt EXCLAMATION KP_EQUAL      &mt KP_MULTIPLY KP_PLUS  &mt F4 KP_NUMBER_4  &mt F5 KP_NUMBER_5  &mt F6 KP_NUMBER_6  &mt F10 KP_NUMBER_0  &kp SCROLLLOCK
+       &none                  &none           &kp BACKSLASH  &kp PIPE        &mt LEFT_BRACE RIGHT_BRACE              &mt GREATER_THAN LESS_THAN    &mt KP_DIVIDE KP_MINUS   &mt F1 KP_NUMBER_1  &mt F2 KP_NUMBER_2  &mt F3 KP_NUMBER_3  &none                &none
+                                                             &trans          &trans                                  &trans                        &trans                   &trans              &trans
             >;
         };
 
