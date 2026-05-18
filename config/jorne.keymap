@@ -88,37 +88,37 @@
 
         eng {
             bindings = <
-&none  &hml ESCAPE CAPSLOCK  &hml EXCLAMATION QUESTION  &kp P  &mt LC(Y) Y          &mt LC(F) F       &hml SEMICOLON COMMA    &hmr COLON PERIOD  &mt LC(G) G    &mt LC(C) C  &kp R        &mt PRINTSCREEN SQT  &kp AMPERSAND        &none
-       &mt LEFT_SHIFT HOME   &mt LC(A) A                &kp O  &kp E                &mt LC(U) U       &mt LC(I) I             &mt DELETE D       &kp M          &kp T        &mt LC(N) N  &mt LC(S) S          &mt RIGHT_SHIFT END
-       &to 1                 &kp Q                      &kp J  &kp K                &mt LC(V) V       &mt RC(X) X             &mt LC(B) B        &kp W          &kp H        &kp L        &mt LC(Z) Z          &mt AT_SIGN DOLLAR
-                                                               &hml LEFT_ALT ENTER  &kp LEFT_CONTROL  &tkl 2 BACKSPACE        &tkr 2 SPACE       &kp LEFT_META  &tkr 3 TAB
+&none  &hml ESCAPE CAPSLOCK  &hml EXCLAMATION QUESTION  &kp P  &mt LC(Y) Y              &mt LC(F) F         &hml SEMICOLON COMMA    &hmr COLON PERIOD  &mt LC(G) G  &mt LC(C) C                &kp R        &mt PRINTSCREEN SQT  &kp AMPERSAND        &none
+       &mt LEFT_SHIFT HOME   &mt LC(A) A                &kp O  &kp E                    &mt LC(U) U         &mt LC(I) I             &mt DELETE D       &kp M        &kp T                      &mt LC(N) N  &mt LC(S) S          &mt RIGHT_SHIFT END
+       &to 1                 &kp Q                      &kp J  &kp K                    &mt LC(V) V         &mt RC(X) X             &mt LC(B) B        &kp W        &kp H                      &kp L        &mt LC(Z) Z          &mt AT_SIGN DOLLAR
+                                                               &mt LEFT_META PAGE_DOWN  &mt LEFT_ALT ENTER  &tkl 2 BACKSPACE        &tkr 2 SPACE       &tkr 3 TAB   &mt RIGHT_CONTROL PAGE_UP
             >;
         };
 
         rus {
             bindings = <
-&none  &hml ESCAPE CAPSLOCK  &hml EXCLAMATION AMPERSAND  &hml RIGHT_BRACKET M  &mt LC(Y) L          &mt LC(F) R       &hml DOLLAR RS(SLASH)    &hmr CARET SLASH  &mt LC(G) P    &mt LC(C) D  &kp Z          &mt PRINTSCREEN X  &hmr O I             &none
-       &mt LEFT_SHIFT HOME   &mt LC(A) E                 &hml Q B              &hml GRAVE T         &mt LC(U) J       &mt LC(I) F              &mt DELETE K      &kp Y          &kp N        &mt LC(N) C    &mt LC(S) H        &mt RIGHT_SHIFT END
-       &to 0                 &kp A                       &kp APOSTROPHE        &kp LEFT_BRACKET     &mt LC(V) S       &mt LC(X) PERIOD         &mt LC(B) COMMA   &kp V          &kp G        &kp SEMICOLON  &mt LC(Z) U        &kp W
-                                                                               &hml LEFT_ALT ENTER  &kp LEFT_CONTROL  &tkl 2 BACKSPACE         &tkr 2 SPACE      &kp LEFT_META  &tkr 3 TAB
+&none  &hml ESCAPE CAPSLOCK  &hml EXCLAMATION AMPERSAND  &hml RIGHT_BRACKET M  &mt LC(Y) L               &mt LC(F) R         &hml DOLLAR RS(SLASH)    &hmr CARET SLASH  &mt LC(G) P  &mt LC(C) D                &kp Z          &mt PRINTSCREEN X  &hmr O I             &none
+       &mt LEFT_SHIFT HOME   &mt LC(A) E                 &hml Q B              &hml GRAVE T              &mt LC(U) J         &mt LC(I) F              &mt DELETE K      &kp Y        &kp N                      &mt LC(N) C    &mt LC(S) H        &mt RIGHT_SHIFT END
+       &to 0                 &kp A                       &kp APOSTROPHE        &kp LEFT_BRACKET          &mt LC(V) S         &mt LC(X) PERIOD         &mt LC(B) COMMA   &kp V        &kp G                      &kp SEMICOLON  &mt LC(Z) U        &kp W
+                                                                               &hml LEFT_META PAGE_DOWN  &mt LEFT_ALT ENTER  &tkl 2 BACKSPACE         &tkr 2 SPACE      &tkr 3 TAB   &mt RIGHT_CONTROL PAGE_UP
             >;
         };
 
         num {
             bindings = <
-&none  &mt LC(INSERT) INSERT  &none  &mt TILDE SLASH      &kp HASH   &mt RIGHT_BRACKET LEFT_BRACKET          &kp PERCENT                       &mt KP_SLASH KP_MINUS     &mt F7 KP_NUMBER_7  &mt F8 KP_NUMBER_8  &mt F9 KP_NUMBER_9  &none                &mt LS(INSERT) INSERT  &none
-       &trans                 &none  &kp PIPE             &kp UNDER  &mt RIGHT_PARENTHESIS LEFT_PARENTHESIS  &mt RS(NUMBER_2) DOUBLE_QUOTES    &mt KP_MULTIPLY KP_PLUS   &mt F4 KP_NUMBER_4  &mt F5 KP_NUMBER_5  &mt F6 KP_NUMBER_6  &mt F10 KP_NUMBER_0  &trans
-       &kp KP_NUMLOCK         &none  &mt GRAVE BACKSLASH  &kp CARET  &mt RIGHT_BRACE LEFT_BRACE              &mt LESS_THAN GREATER_THAN        &mt EXCLAMATION KP_EQUAL  &mt F1 KP_NUMBER_1  &mt F2 KP_NUMBER_2  &mt F3 KP_NUMBER_3  &none                &kp SCROLLLOCK
-                                                          &trans     &trans                                  &trans                            &trans                    &trans              &trans
+&none  &mt LC(INSERT) INSERT  &none  &mt TILDE SLASH      &kp HASH   &mt RIGHT_BRACKET LEFT_BRACKET          &kp PERCENT                       &mt KP_SLASH KP_MINUS     &mt F7 NUMBER_7  &mt F8 NUMBER_8  &mt F9 NUMBER_9  &none             &mt LS(INSERT) INSERT  &none
+       &trans                 &none  &kp PIPE             &kp UNDER  &mt RIGHT_PARENTHESIS LEFT_PARENTHESIS  &mt RS(NUMBER_2) DOUBLE_QUOTES    &mt KP_MULTIPLY KP_PLUS   &mt F4 NUMBER_4  &mt F5 NUMBER_5  &mt F6 NUMBER_6  &mt F10 NUMBER_0  &trans
+       &kp KP_NUMLOCK         &none  &mt GRAVE BACKSLASH  &kp CARET  &mt RIGHT_BRACE LEFT_BRACE              &mt LESS_THAN GREATER_THAN        &mt EXCLAMATION KP_EQUAL  &mt F1 NUMBER_1  &mt F2 NUMBER_2  &mt F3 NUMBER_3  &none             &kp SCROLLLOCK
+                                                          &trans     &trans                                  &trans                            &trans                    &trans           &trans
             >;
         };
 
         sup {
             bindings = <
-&none  &none   &kp C_VOLUME_UP    &kp PG_UP  &kp UP                                &kp PAGE_DOWN  &kp C_NEXT          &none         &none         &none         &none         &bt BT_CLR    &bt BT_CLR_ALL  &none
-       &trans  &kp C_VOLUME_DOWN  &kp LEFT   &kp DOWN                              &kp RIGHT      &kp C_PLAY_PAUSE    &none         &none         &none         &none         &none         &trans
-       &trans  &kp K_MUTE         &none      &kp C_AC_NEXT_KEYBOARD_LAYOUT_SELECT  &none          &kp C_PREVIOUS      &out OUT_TOG  &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4
-                                             &trans                                &trans         &trans              &trans        &trans        &trans
+&none  &none   &kp C_VOLUME_UP    &none     &kp UP                                &none      &kp C_NEXT          &none         &none         &none         &none         &bt BT_CLR    &bt BT_CLR_ALL  &none
+       &trans  &kp C_VOLUME_DOWN  &kp LEFT  &kp DOWN                              &kp RIGHT  &kp C_PLAY_PAUSE    &none         &none         &none         &none         &none         &trans
+       &trans  &kp K_MUTE         &none     &kp C_AC_NEXT_KEYBOARD_LAYOUT_SELECT  &none      &kp C_PREVIOUS      &out OUT_TOG  &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4
+                                            &trans                                &trans     &trans              &trans        &trans        &trans
             >;
         };
     };
