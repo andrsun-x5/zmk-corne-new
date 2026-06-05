@@ -18,11 +18,6 @@
             key-positions = <38 43>;
             timeout-ms = <200>;
         };
-
-        game_esc {
-            bindings = <&kp ESC>;
-            key-positions = <2 3>;
-        };
     };
 
     behaviors {
