@@ -223,7 +223,7 @@
             bindings = <
 &none  &esc_hold_to_eng 0 ESCAPE  &hml EXCLAMATION AMPERSAND  &hml A H            &mt LC(Y) E                 &mt LA(F) U         &hml (DOLLAR) RS(SLASH)    &hmr CARET SLASH      &hmr RIGHT_BRACKET M  &mt LC(C) C                &hmr RC(R) Z  &rus_caret_hold 0 N0  &rus_vim_g_underscore_n_dol_hold 0 0  &none
        &mt LEFT_SHIFT HOME        &mt LC(A) F                 &hml GRAVE J        &hml LC(E) T                &mt LC(U) K         &hml Q B                   &mt DELETE L          &kp V                 &kp N                      &kp G         &mt LC(S) S           &mt RIGHT_SHIFT END
-       &rus_layer_switch 3 0      &hml O I                    &hml SQT SEMICOLON  &mt LC(K) R                 &mt LC(V) COMMA     &mt LC(X) PERIOD           &mt LA(B) D           &hmr LC(W) P          &kp Y                      &hmr W X      &mt LC(Z) PERIOD      &kp LS(N2)
+       &rus_layer_switch 3 0      &hml O I                    &hml SQT SEMICOLON  &mt LC(K) R                 &mt LC(V) COMMA     &mt LC(X) LEFT_BRACKET     &mt LA(B) D           &hmr LC(W) P          &kp Y                      &hmr W X      &mt LC(Z) PERIOD      &kp LS(N2)
                                                                                   &mt LEFT_CONTROL PAGE_DOWN  &mt LEFT_ALT ENTER  &mt LEFT_META BACKSPACE    &mt RIGHT_META SPACE  &mt RIGHT_ALT TAB     &mt RIGHT_CONTROL PAGE_UP
             >;
         };
