@@ -97,9 +97,9 @@
             tapping-term-ms = <220>;
         };
 
-        layer_switch: layer_switch {
+        eng_layer_switch: eng_layer_switch {
             compatible = "zmk,behavior-hold-tap";
-            label = "LAYER_SWITCH";
+            label = "ENG_LAYER_SWITCH";
             bindings = <&to>, <&to>;
 
             #binding-cells = <2>;
@@ -135,6 +135,16 @@
             #binding-cells = <2>;
             tapping-term-ms = <220>;
             flavor = "tap-preferred";
+        };
+
+        rus_layer_switch: rus_layer_switch {
+            compatible = "zmk,behavior-hold-tap";
+            label = "RUS_LAYER_SWITCH";
+            bindings = <&to>, <&rus_toggle_num>;
+
+            #binding-cells = <2>;
+            flavor = "tap-preferred";
+            tapping-term-ms = <220>;
         };
     };
 
@@ -186,6 +196,15 @@
             wait-ms = <200>;
             tap-ms = <50>;
         };
+
+        rus_toggle_num: rus_toggle_num {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp CAPSLOCK &tog 2>;
+            label = "RUS_TOGGLE_NUM";
+            wait-ms = <200>;
+            tap-ms = <50>;
+        };
     };
 
     keymap {
@@ -195,7 +214,7 @@
             bindings = <
 &none  &esc_hold_to_rus 0 ESCAPE  &hml EXCLAMATION QUESTION  &kp P  &mt LC(Y) Y                 &mt LA(F) F         &hml SEMICOLON COMMA       &hmr COLON PERIOD     &kp G              &mt LC(C) C                &mt LC(R) R  &mt CARET N0  &eng_vim_g_underscore_hold 0 DOLLAR  &none
        &mt LEFT_SHIFT HOME        &mt LC(A) A                &kp O  &mt LC(E) E                 &mt LC(U) U         &kp I                      &mt DELETE D          &kp M              &kp T                      &kp N        &mt LC(S) S   &mt RIGHT_SHIFT END
-       &layer_switch 3 2          &kp Q                      &kp J  &mt LC(K) K                 &mt LC(V) V         &mt RC(X) X                &mt LA(B) B           &mt LC(W) W        &kp H                      &kp L        &mt LC(Z) Z   &hmr DOUBLE_QUOTES SQT
+       &eng_layer_switch 3 2      &kp Q                      &kp J  &mt LC(K) K                 &mt LC(V) V         &mt RC(X) X                &mt LA(B) B           &mt LC(W) W        &kp H                      &kp L        &mt LC(Z) Z   &hmr DOUBLE_QUOTES SQT
                                                                     &mt LEFT_CONTROL PAGE_DOWN  &mt LEFT_ALT ENTER  &mt LEFT_META BACKSPACE    &mt RIGHT_META SPACE  &mt RIGHT_ALT TAB  &mt RIGHT_CONTROL PAGE_UP
             >;
         };
@@ -204,17 +223,17 @@
             bindings = <
 &none  &esc_hold_to_eng 0 ESCAPE  &hml EXCLAMATION AMPERSAND  &hml A H            &mt LC(Y) E                 &mt LA(F) U         &hml (DOLLAR) RS(SLASH)    &hmr CARET SLASH      &hmr LC(RIGHT_BRACKET) M  &mt LC(C) C                &hmr RC(R) Z  &rus_caret_hold 0 N0  &rus_vim_g_underscore_n_dol_hold 0 0  &none
        &mt LEFT_SHIFT HOME        &mt LC(A) F                 &hml GRAVE U        &hml LC(E) T                &mt LC(U) K         &hml Q B                   &mt DELETE L          &kp V                     &kp N                      &kp G         &mt LC(S) S           &mt RIGHT_SHIFT END
-       &to 2                      &hml O I                    &hml SQT SEMICOLON  &mt LC(K) R                 &mt LC(V) COMMA     &mt LC(X) PERIOD           &mt LA(B) D           &hmr LC(W) P              &kp Y                      &hmr W X      &mt LC(Z) PERIOD      &kp W
+       &rus_layer_switch 3 0      &hml O I                    &hml SQT SEMICOLON  &mt LC(K) R                 &mt LC(V) COMMA     &mt LC(X) PERIOD           &mt LA(B) D           &hmr LC(W) P              &kp Y                      &hmr W X      &mt LC(Z) PERIOD      &kp W
                                                                                   &mt LEFT_CONTROL PAGE_DOWN  &mt LEFT_ALT ENTER  &mt LEFT_META BACKSPACE    &mt RIGHT_META SPACE  &mt RIGHT_ALT TAB         &mt RIGHT_CONTROL PAGE_UP
             >;
         };
 
-        num_eng {
+        num {
             bindings = <
-&none  &mt LC(INSERT) INSERT  &none  &mt TILDE SLASH      &kp AT_SIGN  &mt RIGHT_BRACKET LEFT_BRACKET          &kp PERCENT                   &mt KP_SLASH KP_MINUS     &mt F7 NUMBER_7  &mt F8 NUMBER_8  &mt F9 NUMBER_9  &none             &mt LS(INSERT) INSERT  &none
-       &trans                 &none  &kp PIPE             &kp UNDER    &mt RIGHT_PARENTHESIS LEFT_PARENTHESIS  &mt LESS_THAN GREATER_THAN    &mt KP_MULTIPLY KP_PLUS   &mt F4 NUMBER_4  &mt F5 NUMBER_5  &mt F6 NUMBER_6  &mt F10 NUMBER_0  &trans
-       &kp KP_NUMLOCK         &none  &mt GRAVE BACKSLASH  &kp HASH     &mt RIGHT_BRACE LEFT_BRACE              &kp AT_SIGN                   &mt EXCLAMATION KP_EQUAL  &mt F1 NUMBER_1  &mt F2 NUMBER_2  &mt F3 NUMBER_3  &none             &kp SCROLLLOCK
-                                                          &trans       &trans                                  &trans                        &trans                    &trans           &trans
+&none  &mt LC(INSERT) INSERT  &none                       &kp SLASH      &kp AT_SIGN  &mt RIGHT_BRACKET LEFT_BRACKET          &kp PERCENT                   &mt KP_SLASH KP_MINUS     &mt F7 NUMBER_7  &mt F8 NUMBER_8  &mt F9 NUMBER_9  &none             &mt LS(INSERT) INSERT  &none
+       &trans                 &hmr SCROLLLOCK KP_NUMLOCK  &kp PIPE       &kp UNDER    &mt RIGHT_PARENTHESIS LEFT_PARENTHESIS  &mt LESS_THAN GREATER_THAN    &mt KP_MULTIPLY KP_PLUS   &mt F4 NUMBER_4  &mt F5 NUMBER_5  &mt F6 NUMBER_6  &mt F10 NUMBER_0  &trans
+       &trans                 &none                       &kp BACKSLASH  &kp HASH     &mt RIGHT_BRACE LEFT_BRACE              &hml GRAVE TILDE              &mt EXCLAMATION KP_EQUAL  &mt F1 NUMBER_1  &mt F2 NUMBER_2  &mt F3 NUMBER_3  &none             &trans
+                                                                         &trans       &trans                                  &trans                        &trans                    &trans           &trans
             >;
         };
 
