@@ -100,7 +100,7 @@
         eng_layer_switch: eng_layer_switch {
             compatible = "zmk,behavior-hold-tap";
             label = "ENG_LAYER_SWITCH";
-            bindings = <&to>, <&to>;
+            bindings = <&tog>, <&tog>;
 
             #binding-cells = <2>;
             flavor = "tap-preferred";
@@ -140,7 +140,7 @@
         rus_layer_switch: rus_layer_switch {
             compatible = "zmk,behavior-hold-tap";
             label = "RUS_LAYER_SWITCH";
-            bindings = <&to>, <&rus_toggle_num>;
+            bindings = <&tog>, <&rus_toggle_num>;
 
             #binding-cells = <2>;
             flavor = "tap-preferred";
