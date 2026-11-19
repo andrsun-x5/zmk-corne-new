@@ -21,14 +21,6 @@
     };
 
     behaviors {
-        shortcut_mod_tap: shortcut_mod_tap {
-            compatible = "zmk,behavior-hold-tap";
-            #binding-cells = <2>;
-            bindings = <&shortcut_mod>, <&kp>;
-            flavor = "hold-preferred";
-            tapping-term-ms = <200>;
-        };
-
         hml: hml {
             compatible = "zmk,behavior-hold-tap";
             label = "HML";
@@ -157,16 +149,6 @@
     };
 
     macros {
-        shortcut_mod: shortcut_mod {
-            compatible = "zmk,behavior-macro-one-param";
-            #binding-cells = <1>;
-            wait-ms = <0>;
-            bindings =
-                <&macro_press &macro_param_1to1 &kp 0 &mo 4>,
-                <&macro_pause_for_release>,
-                <&macro_release &mo 4 &macro_param_1to1 &kp 0>;
-        };
-
         lang_to_rus: lang_to_rus {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
@@ -242,7 +224,7 @@
 &none  &esc_hold_to_eng 0 ESCAPE  &hml EXCLAMATION AMPERSAND  &hml A H            &mt LC(Y) E                 &mt LA(F) U         &hml (DOLLAR) RS(SLASH)    &hmr CARET SLASH      &hmr RIGHT_BRACKET M  &mt LC(C) C                &hmr RC(R) Z  &rus_caret_hold 0 N0  &rus_vim_g_underscore_n_dol_hold 0 0  &none
        &mt LEFT_SHIFT HOME        &mt LC(A) F                 &hml GRAVE J        &hml LC(E) T                &mt LC(U) K         &hml Q B                   &mt DELETE L          &kp V                 &kp N                      &kp G         &mt LC(S) S           &mt RIGHT_SHIFT END
        &rus_layer_switch 3 0      &hml O I                    &hml SQT SEMICOLON  &mt LC(K) R                 &mt LC(V) COMMA     &mt LC(X) LEFT_BRACKET     &mt LA(B) D           &hmr LC(W) P          &kp Y                      &hmr W X      &mt LC(Z) PERIOD      &kp LS(N2)
-                                                                                  &shortcut_mod_tap LEFT_CONTROL PAGE_DOWN  &shortcut_mod_tap LEFT_ALT ENTER  &shortcut_mod_tap LEFT_META BACKSPACE    &shortcut_mod_tap RIGHT_META SPACE  &shortcut_mod_tap RIGHT_ALT TAB     &shortcut_mod_tap RIGHT_CONTROL PAGE_UP
+                                                                                  &mt LEFT_CONTROL PAGE_DOWN  &mt LEFT_ALT ENTER  &mt LEFT_META BACKSPACE    &mt RIGHT_META SPACE  &mt RIGHT_ALT TAB     &mt RIGHT_CONTROL PAGE_UP
             >;
         };
 
@@ -261,19 +243,6 @@
        &trans  &kp C_VOLUME_DOWN  &kp LEFT  &kp DOWN                              &kp RIGHT  &kp C_PLAY_PAUSE    &none         &none         &none         &none         &none         &trans
        &trans  &kp K_MUTE         &none     &kp C_AC_NEXT_KEYBOARD_LAYOUT_SELECT  &none      &kp C_PREVIOUS      &out OUT_TOG  &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4
                                             &trans                                &trans     &trans              &trans        &trans        &trans
-            >;
-        };
-
-        // English tap codes while a thumb modifier is held on rus.
-        shortcuts {
-            bindings = <
-                &trans &kp ESCAPE &kp QUESTION &kp P &kp Y &kp F &kp COMMA
-                &kp PERIOD &kp G &kp C &kp R &kp N0 &kp DOLLAR &trans
-                &kp HOME &kp A &kp O &kp E &kp U &kp I
-                &kp D &kp M &kp T &kp N &kp S &kp END
-                &trans &kp Q &kp J &kp K &kp V &kp X
-                &kp B &kp W &kp H &kp L &kp Z &kp SQT
-                &trans &trans &trans &trans &trans &trans
             >;
         };
     };
