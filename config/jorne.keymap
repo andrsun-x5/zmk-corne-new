@@ -8,6 +8,7 @@
 #include <dt-bindings/zmk/bt.h>
 #include <dt-bindings/zmk/keys.h>
 #include <dt-bindings/zmk/outputs.h>
+#include <dt-bindings/zmk/modifiers.h>
 
 / {
     combos {
@@ -21,6 +22,215 @@
     };
 
     behaviors {
+        // Preserve Russian tap/hold bindings; use English codes with Ctrl, Alt or GUI.
+        rus_shortcut_p: rus_shortcut_p {
+            compatible = "zmk,behavior-mod-morph";
+            #binding-cells = <0>;
+            bindings = <&hml A H>, <&kp P>;
+            mods = <(MOD_LCTL | MOD_RCTL | MOD_LALT | MOD_RALT | MOD_LGUI | MOD_RGUI)>;
+            keep-mods = <(MOD_LCTL | MOD_RCTL | MOD_LALT | MOD_RALT | MOD_LGUI | MOD_RGUI)>;
+        };
+
+        rus_shortcut_y: rus_shortcut_y {
+            compatible = "zmk,behavior-mod-morph";
+            #binding-cells = <0>;
+            bindings = <&mt LC(Y) E>, <&kp Y>;
+            mods = <(MOD_LCTL | MOD_RCTL | MOD_LALT | MOD_RALT | MOD_LGUI | MOD_RGUI)>;
+            keep-mods = <(MOD_LCTL | MOD_RCTL | MOD_LALT | MOD_RALT | MOD_LGUI | MOD_RGUI)>;
+        };
+
+        rus_shortcut_f: rus_shortcut_f {
+            compatible = "zmk,behavior-mod-morph";
+            #binding-cells = <0>;
+            bindings = <&mt LA(F) U>, <&kp F>;
+            mods = <(MOD_LCTL | MOD_RCTL | MOD_LALT | MOD_RALT | MOD_LGUI | MOD_RGUI)>;
+            keep-mods = <(MOD_LCTL | MOD_RCTL | MOD_LALT | MOD_RALT | MOD_LGUI | MOD_RGUI)>;
+        };
+
+        rus_shortcut_g: rus_shortcut_g {
+            compatible = "zmk,behavior-mod-morph";
+            #binding-cells = <0>;
+            bindings = <&hmr RIGHT_BRACKET M>, <&kp G>;
+            mods = <(MOD_LCTL | MOD_RCTL | MOD_LALT | MOD_RALT | MOD_LGUI | MOD_RGUI)>;
+            keep-mods = <(MOD_LCTL | MOD_RCTL | MOD_LALT | MOD_RALT | MOD_LGUI | MOD_RGUI)>;
+        };
+
+        rus_shortcut_c: rus_shortcut_c {
+            compatible = "zmk,behavior-mod-morph";
+            #binding-cells = <0>;
+            bindings = <&mt LC(C) C>, <&kp C>;
+            mods = <(MOD_LCTL | MOD_RCTL | MOD_LALT | MOD_RALT | MOD_LGUI | MOD_RGUI)>;
+            keep-mods = <(MOD_LCTL | MOD_RCTL | MOD_LALT | MOD_RALT | MOD_LGUI | MOD_RGUI)>;
+        };
+
+        rus_shortcut_r: rus_shortcut_r {
+            compatible = "zmk,behavior-mod-morph";
+            #binding-cells = <0>;
+            bindings = <&hmr RC(R) Z>, <&kp R>;
+            mods = <(MOD_LCTL | MOD_RCTL | MOD_LALT | MOD_RALT | MOD_LGUI | MOD_RGUI)>;
+            keep-mods = <(MOD_LCTL | MOD_RCTL | MOD_LALT | MOD_RALT | MOD_LGUI | MOD_RGUI)>;
+        };
+
+        rus_shortcut_a: rus_shortcut_a {
+            compatible = "zmk,behavior-mod-morph";
+            #binding-cells = <0>;
+            bindings = <&mt LC(A) F>, <&kp A>;
+            mods = <(MOD_LCTL | MOD_RCTL | MOD_LALT | MOD_RALT | MOD_LGUI | MOD_RGUI)>;
+            keep-mods = <(MOD_LCTL | MOD_RCTL | MOD_LALT | MOD_RALT | MOD_LGUI | MOD_RGUI)>;
+        };
+
+        rus_shortcut_o: rus_shortcut_o {
+            compatible = "zmk,behavior-mod-morph";
+            #binding-cells = <0>;
+            bindings = <&hml GRAVE J>, <&kp O>;
+            mods = <(MOD_LCTL | MOD_RCTL | MOD_LALT | MOD_RALT | MOD_LGUI | MOD_RGUI)>;
+            keep-mods = <(MOD_LCTL | MOD_RCTL | MOD_LALT | MOD_RALT | MOD_LGUI | MOD_RGUI)>;
+        };
+
+        rus_shortcut_e: rus_shortcut_e {
+            compatible = "zmk,behavior-mod-morph";
+            #binding-cells = <0>;
+            bindings = <&hml LC(E) T>, <&kp E>;
+            mods = <(MOD_LCTL | MOD_RCTL | MOD_LALT | MOD_RALT | MOD_LGUI | MOD_RGUI)>;
+            keep-mods = <(MOD_LCTL | MOD_RCTL | MOD_LALT | MOD_RALT | MOD_LGUI | MOD_RGUI)>;
+        };
+
+        rus_shortcut_u: rus_shortcut_u {
+            compatible = "zmk,behavior-mod-morph";
+            #binding-cells = <0>;
+            bindings = <&mt LC(U) K>, <&kp U>;
+            mods = <(MOD_LCTL | MOD_RCTL | MOD_LALT | MOD_RALT | MOD_LGUI | MOD_RGUI)>;
+            keep-mods = <(MOD_LCTL | MOD_RCTL | MOD_LALT | MOD_RALT | MOD_LGUI | MOD_RGUI)>;
+        };
+
+        rus_shortcut_i: rus_shortcut_i {
+            compatible = "zmk,behavior-mod-morph";
+            #binding-cells = <0>;
+            bindings = <&hml Q B>, <&kp I>;
+            mods = <(MOD_LCTL | MOD_RCTL | MOD_LALT | MOD_RALT | MOD_LGUI | MOD_RGUI)>;
+            keep-mods = <(MOD_LCTL | MOD_RCTL | MOD_LALT | MOD_RALT | MOD_LGUI | MOD_RGUI)>;
+        };
+
+        rus_shortcut_d: rus_shortcut_d {
+            compatible = "zmk,behavior-mod-morph";
+            #binding-cells = <0>;
+            bindings = <&mt DELETE L>, <&kp D>;
+            mods = <(MOD_LCTL | MOD_RCTL | MOD_LALT | MOD_RALT | MOD_LGUI | MOD_RGUI)>;
+            keep-mods = <(MOD_LCTL | MOD_RCTL | MOD_LALT | MOD_RALT | MOD_LGUI | MOD_RGUI)>;
+        };
+
+        rus_shortcut_m: rus_shortcut_m {
+            compatible = "zmk,behavior-mod-morph";
+            #binding-cells = <0>;
+            bindings = <&kp V>, <&kp M>;
+            mods = <(MOD_LCTL | MOD_RCTL | MOD_LALT | MOD_RALT | MOD_LGUI | MOD_RGUI)>;
+            keep-mods = <(MOD_LCTL | MOD_RCTL | MOD_LALT | MOD_RALT | MOD_LGUI | MOD_RGUI)>;
+        };
+
+        rus_shortcut_t: rus_shortcut_t {
+            compatible = "zmk,behavior-mod-morph";
+            #binding-cells = <0>;
+            bindings = <&kp N>, <&kp T>;
+            mods = <(MOD_LCTL | MOD_RCTL | MOD_LALT | MOD_RALT | MOD_LGUI | MOD_RGUI)>;
+            keep-mods = <(MOD_LCTL | MOD_RCTL | MOD_LALT | MOD_RALT | MOD_LGUI | MOD_RGUI)>;
+        };
+
+        rus_shortcut_n: rus_shortcut_n {
+            compatible = "zmk,behavior-mod-morph";
+            #binding-cells = <0>;
+            bindings = <&kp G>, <&kp N>;
+            mods = <(MOD_LCTL | MOD_RCTL | MOD_LALT | MOD_RALT | MOD_LGUI | MOD_RGUI)>;
+            keep-mods = <(MOD_LCTL | MOD_RCTL | MOD_LALT | MOD_RALT | MOD_LGUI | MOD_RGUI)>;
+        };
+
+        rus_shortcut_s: rus_shortcut_s {
+            compatible = "zmk,behavior-mod-morph";
+            #binding-cells = <0>;
+            bindings = <&mt LC(S) S>, <&kp S>;
+            mods = <(MOD_LCTL | MOD_RCTL | MOD_LALT | MOD_RALT | MOD_LGUI | MOD_RGUI)>;
+            keep-mods = <(MOD_LCTL | MOD_RCTL | MOD_LALT | MOD_RALT | MOD_LGUI | MOD_RGUI)>;
+        };
+
+        rus_shortcut_q: rus_shortcut_q {
+            compatible = "zmk,behavior-mod-morph";
+            #binding-cells = <0>;
+            bindings = <&hml O I>, <&kp Q>;
+            mods = <(MOD_LCTL | MOD_RCTL | MOD_LALT | MOD_RALT | MOD_LGUI | MOD_RGUI)>;
+            keep-mods = <(MOD_LCTL | MOD_RCTL | MOD_LALT | MOD_RALT | MOD_LGUI | MOD_RGUI)>;
+        };
+
+        rus_shortcut_j: rus_shortcut_j {
+            compatible = "zmk,behavior-mod-morph";
+            #binding-cells = <0>;
+            bindings = <&hml SQT SEMICOLON>, <&kp J>;
+            mods = <(MOD_LCTL | MOD_RCTL | MOD_LALT | MOD_RALT | MOD_LGUI | MOD_RGUI)>;
+            keep-mods = <(MOD_LCTL | MOD_RCTL | MOD_LALT | MOD_RALT | MOD_LGUI | MOD_RGUI)>;
+        };
+
+        rus_shortcut_k: rus_shortcut_k {
+            compatible = "zmk,behavior-mod-morph";
+            #binding-cells = <0>;
+            bindings = <&mt LC(K) R>, <&kp K>;
+            mods = <(MOD_LCTL | MOD_RCTL | MOD_LALT | MOD_RALT | MOD_LGUI | MOD_RGUI)>;
+            keep-mods = <(MOD_LCTL | MOD_RCTL | MOD_LALT | MOD_RALT | MOD_LGUI | MOD_RGUI)>;
+        };
+
+        rus_shortcut_v: rus_shortcut_v {
+            compatible = "zmk,behavior-mod-morph";
+            #binding-cells = <0>;
+            bindings = <&mt LC(V) COMMA>, <&kp V>;
+            mods = <(MOD_LCTL | MOD_RCTL | MOD_LALT | MOD_RALT | MOD_LGUI | MOD_RGUI)>;
+            keep-mods = <(MOD_LCTL | MOD_RCTL | MOD_LALT | MOD_RALT | MOD_LGUI | MOD_RGUI)>;
+        };
+
+        rus_shortcut_x: rus_shortcut_x {
+            compatible = "zmk,behavior-mod-morph";
+            #binding-cells = <0>;
+            bindings = <&mt LC(X) LEFT_BRACKET>, <&kp X>;
+            mods = <(MOD_LCTL | MOD_RCTL | MOD_LALT | MOD_RALT | MOD_LGUI | MOD_RGUI)>;
+            keep-mods = <(MOD_LCTL | MOD_RCTL | MOD_LALT | MOD_RALT | MOD_LGUI | MOD_RGUI)>;
+        };
+
+        rus_shortcut_b: rus_shortcut_b {
+            compatible = "zmk,behavior-mod-morph";
+            #binding-cells = <0>;
+            bindings = <&mt LA(B) D>, <&kp B>;
+            mods = <(MOD_LCTL | MOD_RCTL | MOD_LALT | MOD_RALT | MOD_LGUI | MOD_RGUI)>;
+            keep-mods = <(MOD_LCTL | MOD_RCTL | MOD_LALT | MOD_RALT | MOD_LGUI | MOD_RGUI)>;
+        };
+
+        rus_shortcut_w: rus_shortcut_w {
+            compatible = "zmk,behavior-mod-morph";
+            #binding-cells = <0>;
+            bindings = <&hmr LC(W) P>, <&kp W>;
+            mods = <(MOD_LCTL | MOD_RCTL | MOD_LALT | MOD_RALT | MOD_LGUI | MOD_RGUI)>;
+            keep-mods = <(MOD_LCTL | MOD_RCTL | MOD_LALT | MOD_RALT | MOD_LGUI | MOD_RGUI)>;
+        };
+
+        rus_shortcut_h: rus_shortcut_h {
+            compatible = "zmk,behavior-mod-morph";
+            #binding-cells = <0>;
+            bindings = <&kp Y>, <&kp H>;
+            mods = <(MOD_LCTL | MOD_RCTL | MOD_LALT | MOD_RALT | MOD_LGUI | MOD_RGUI)>;
+            keep-mods = <(MOD_LCTL | MOD_RCTL | MOD_LALT | MOD_RALT | MOD_LGUI | MOD_RGUI)>;
+        };
+
+        rus_shortcut_l: rus_shortcut_l {
+            compatible = "zmk,behavior-mod-morph";
+            #binding-cells = <0>;
+            bindings = <&hmr W X>, <&kp L>;
+            mods = <(MOD_LCTL | MOD_RCTL | MOD_LALT | MOD_RALT | MOD_LGUI | MOD_RGUI)>;
+            keep-mods = <(MOD_LCTL | MOD_RCTL | MOD_LALT | MOD_RALT | MOD_LGUI | MOD_RGUI)>;
+        };
+
+        rus_shortcut_z: rus_shortcut_z {
+            compatible = "zmk,behavior-mod-morph";
+            #binding-cells = <0>;
+            bindings = <&mt LC(Z) PERIOD>, <&kp Z>;
+            mods = <(MOD_LCTL | MOD_RCTL | MOD_LALT | MOD_RALT | MOD_LGUI | MOD_RGUI)>;
+            keep-mods = <(MOD_LCTL | MOD_RCTL | MOD_LALT | MOD_RALT | MOD_LGUI | MOD_RGUI)>;
+        };
+
         hml: hml {
             compatible = "zmk,behavior-hold-tap";
             label = "HML";
@@ -221,10 +431,10 @@
 
         rus {
             bindings = <
-&none  &esc_hold_to_eng 0 ESCAPE  &hml EXCLAMATION AMPERSAND  &hml A H            &mt LC(Y) E                 &mt LA(F) U         &hml (DOLLAR) RS(SLASH)    &hmr CARET SLASH      &hmr RIGHT_BRACKET M  &mt LC(C) C                &hmr RC(R) Z  &rus_caret_hold 0 N0  &rus_vim_g_underscore_n_dol_hold 0 0  &none
-       &mt LEFT_SHIFT HOME        &mt LC(A) F                 &hml GRAVE J        &hml LC(E) T                &mt LC(U) K         &hml Q B                   &mt DELETE L          &kp V                 &kp N                      &kp G         &mt LC(S) S           &mt RIGHT_SHIFT END
-       &rus_layer_switch 3 0      &hml O I                    &hml SQT SEMICOLON  &mt LC(K) R                 &mt LC(V) COMMA     &mt LC(X) LEFT_BRACKET     &mt LA(B) D           &hmr LC(W) P          &kp Y                      &hmr W X      &mt LC(Z) PERIOD      &kp LS(N2)
-                                                                                  &mt LEFT_CONTROL PAGE_DOWN  &mt LEFT_ALT ENTER  &mt LEFT_META BACKSPACE    &mt RIGHT_META SPACE  &mt RIGHT_ALT TAB     &mt RIGHT_CONTROL PAGE_UP
+                &none  &esc_hold_to_eng 0 ESCAPE  &hml EXCLAMATION AMPERSAND  &rus_shortcut_p  &rus_shortcut_y  &rus_shortcut_f  &hml (DOLLAR) RS(SLASH)  &hmr CARET SLASH  &rus_shortcut_g  &rus_shortcut_c  &rus_shortcut_r  &rus_caret_hold 0 N0  &rus_vim_g_underscore_n_dol_hold 0 0  &none
+                &mt LEFT_SHIFT HOME  &rus_shortcut_a  &rus_shortcut_o  &rus_shortcut_e  &rus_shortcut_u  &rus_shortcut_i  &rus_shortcut_d  &rus_shortcut_m  &rus_shortcut_t  &rus_shortcut_n  &rus_shortcut_s  &mt RIGHT_SHIFT END
+                &rus_layer_switch 3 0  &rus_shortcut_q  &rus_shortcut_j  &rus_shortcut_k  &rus_shortcut_v  &rus_shortcut_x  &rus_shortcut_b  &rus_shortcut_w  &rus_shortcut_h  &rus_shortcut_l  &rus_shortcut_z  &kp LS(N2)
+                &mt LEFT_CONTROL PAGE_DOWN  &mt LEFT_ALT ENTER  &mt LEFT_META BACKSPACE  &mt RIGHT_META SPACE  &mt RIGHT_ALT TAB  &mt RIGHT_CONTROL PAGE_UP
             >;
         };
 
